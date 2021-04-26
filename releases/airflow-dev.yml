@@ -12,8 +12,10 @@ spec:
     name: airflow
     version: 1.0.0
   values:
-    images.airflow.repository: "587413328198.dkr.ecr.us-east-2.amazonaws.com/airflow-eks-docker-dev"
-    images.airflow.tag: "99075a90"
+    images:
+      airflow:
+        repository: "587413328198.dkr.ecr.us-east-2.amazonaws.com/airflow-eks-docker-dev"
+        tag: "99075a90"
     fernetKey: "zTxhk7FuGqQVPZVoukLn5bGWOrgHzhQnBnaqAItcZGI="
     env:
       - name: "AIRFLOW__KUBERNETES__DAGS_IN_IMAGE"
