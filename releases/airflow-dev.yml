@@ -8,7 +8,7 @@ metadata:
 spec:
   releaseName: infra-airflow-dev
   chart:
-    repository: https://github.com/enniomorricone123/airflow-eks-helm-chart.git
+    repository: https://enniomorricone123.github.io/airflow-eks-helm-chart
     name: airflow
     version: 1.0.0
   values:
