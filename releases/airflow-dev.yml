@@ -1,12 +1,12 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: infra-airflow
+  name: airflow
   namespace: dev
   annotations:
     flux.weave.works/automated: "true"
 spec:
-  releaseName: infra-airflow-dev
+  releaseName: airflow-dev
   chart:
     repository: https://enniomorricone123.github.io/airflow-eks-helm-chart
     name: airflow
@@ -38,13 +38,13 @@ spec:
         storageClassName: aws-efs
         existingClaim: efs-storage-claim
         accessMode: ReadWriteMany
-      gitSync:
-        enabled: true
-        repo: git@github.com:enniomorricone123/airflow-dags.git
-        branch: master
-        maxFailures: 0
-        subPath: ""
-        wait: 60
-        sshKeySecret: airflow-git-private-dags
+      # gitSync:
+      #   enabled: true
+      #   repo: git@github.com:enniomorricone123/airflow-dags.git
+      #   branch: master
+      #   maxFailures: 0
+      #   subPath: ""
+      #   wait: 60
+      #   sshKeySecret: airflow-git-private-dags
         
       
