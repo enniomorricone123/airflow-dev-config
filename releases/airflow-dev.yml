@@ -27,4 +27,10 @@ spec:
       - name: "AIRFLOW__CORE__LOAD_EXAMPLES"
         value: "True"
     executor: "KubernetesExecutor"
-    
+    dags:
+      persistence: 
+        enabled: true
+        size: 512Mi
+        storageClassName: aws-efs
+        existingClaim: efs-storage-claim
+      
