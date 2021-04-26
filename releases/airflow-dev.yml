@@ -33,4 +33,5 @@ spec:
         size: 512Mi
         storageClassName: aws-efs
         existingClaim: efs-storage-claim
+        accessMode: ReadWriteMany
       
