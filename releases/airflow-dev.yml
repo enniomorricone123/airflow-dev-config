@@ -29,22 +29,22 @@ spec:
       - name: "AIRFLOW__KUBERNETES__RUN_AS_USER"
         value: "50000"
       - name: "AIRFLOW__CORE__LOAD_EXAMPLES"
-        value: "False"
+        value: "True"
     executor: "KubernetesExecutor"
-    # dags:
-    #   persistence: 
-    #     enabled: true
-    #     size: 512Mi
-    #     storageClassName: aws-efs
-    #     existingClaim: efs-storage-claim
-    #     accessMode: ReadWriteMany
-    #   gitSync:
-    #     enabled: true
-    #     repo: git@github.com:enniomorricone123/airflow-dags.git
-    #     branch: master
-    #     maxFailures: 0
-    #     subPath: ""
-    #     wait: 60
-    #     sshKeySecret: airflow-git-private-dags
+    dags:
+      persistence: 
+        enabled: true
+        size: 512Mi
+        storageClassName: aws-efs
+        existingClaim: efs-storage-claim
+        accessMode: ReadWriteMany
+      gitSync:
+        enabled: true
+        repo: git@github.com:enniomorricone123/airflow-dags.git
+        branch: master
+        maxFailures: 0
+        subPath: ""
+        wait: 60
+        sshKeySecret: airflow-git-private-dags
         
       
