@@ -1,15 +1,15 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: airflow
+  name: us-infra-airflow
   namespace: dev
   annotations:
     flux.weave.works/automated: "true"
 spec:
-  releaseName: airflow-dev
+  releaseName: us-infra-airflow-dev
   chart:
     repository: https://enniomorricone123.github.io/airflow-eks-helm-chart
-    name: airflow
+    name: us-infra-airflow
     version: 1.0.0
   values:
     # images:
