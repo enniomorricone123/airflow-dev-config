@@ -9,7 +9,7 @@ spec:
   releaseName: infra-airflow-dev
   chart:
     repository: https://enniomorricone123.github.io/airflow-eks-helm-chart
-    name: airflow
+    name: infra-airflow
     version: 1.0.0
   values:
     # images:
