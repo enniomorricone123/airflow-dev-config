@@ -33,14 +33,14 @@ spec:
       - name: "AIRFLOW__CORE__LOAD_EXAMPLES"
         value: "True"
     executor: "KubernetesExecutor"
-    dags:
-      persistence: 
-        enabled: true
-        size: 512Mi
-        storageClassName: aws-efs
-        existingClaim: efs-storage-claim
-        accessMode: ReadWriteMany
-      # gitSync:
+    # dags:
+    #   persistence: 
+    #     enabled: true
+    #     size: 512Mi
+    #     storageClassName: aws-efs
+    #     existingClaim: efs-storage-claim
+    #     accessMode: ReadWriteMany
+    #   # gitSync:
       #   enabled: true
       #   repo: git@github.com:enniomorricone123/airflow-dags.git
       #   branch: master
