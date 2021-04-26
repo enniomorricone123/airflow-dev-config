@@ -10,7 +10,7 @@ metadata:
 spec:
   selector:
     component: webserver
-    release: airflow-dev
+    release: infra-airflow-dev
   ports:
     - name: web
       protocol: TCP
